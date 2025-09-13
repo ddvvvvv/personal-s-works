@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px ;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 10px auto;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro h2 {
+            font-size: 30px;
+            color: #333;
+        }
+        .intro p {
+            font-size: 18px;
+            color: #666;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .skills .skill {
+            background-color: white;
+            padding: 40px;
+            margin: 30px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1;
+            text-align: center;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+        .skills .skill:hover {
+            /* transform: translateY(-10px); */
+            transform:scale(1.2) rotate(10deg);
+            background-color: #d91818;
+        }
+
+        @keyframes move {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 0; }
+        }
+        .contact{
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人主页</h1>
+    </header>
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#skills">特长</a>
+        <a href="#contact">联系方式</a>
+    </nav>
+    <div class="container">
+        <div class="intro">
+            <h2>关于</h2>
+            <p>23级数据01班戴维   </p>
+        </div>
+        <div class="skills">
+            <div class="skill">
+                <h3>1</h3>
+                <p>xxxxxxxxxxxx</p>
+            </div>
+            <div class="skill">
+                <h3>2</h3>
+                <p>xxxxxxxxxx</p>
+            </div>
+            <div class="skill">
+                <h3>3</h3>
+                <p>xxxxxxxxxxxx</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+            <h2>联系方式</h2>
+            <p>联系我:</p>
+            <p>电子邮件:3500976336@qq.com </p>
+                <p>dvv324934@gmail.com</p>
+            <p>电话: 18244821537</p>
+    </div>
+
+     <footer>
+        <p>&copy; 2025 个人主页 | 版权所有</p>
+    </footer>
+</body>
+</html>
