@@ -60,8 +60,11 @@ class TreasureMap {
     log.appendChild(p); //把新元素加到log容器里
     log.scrollTop = log.scrollHeight; //自动滚动到底部
 
-  }
-
+  
+ const history = JSON.parse(localStorage.getItem('logHistory') || "[]");
+  history.push(m);
+  localStorage.setItem('logHistory', JSON.stringify(history));
+}
 
 async function startTreasureHunt() {
   document.getElementById("log").innerHTML = ""; // 清空日志
@@ -84,3 +87,17 @@ async function startTreasureHunt() {
     logMessage("任务失败: " + error);
   }
 }
+
+// 恢复进度
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLogs = JSON.parse(localStorage.getItem('logHistory') || "[]");
+  if (savedLogs.length > 0) {
+    savedLogs.forEach(logMessage);
+  }
+
+  // 自动恢复到上次场景
+  const lastScene = localStorage.getItem('lastScene');
+  if (lastScene && location.pathname.endsWith('index.html') === false) {
+    console.log("恢复场景:", lastScene);
+  }
+});

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>异步寻宝 - 地图</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>异步寻宝地图</h1>
+  <p>点击一个地点开始冒险：</p>
+
+  <div class="map">
+    <button onclick="enterScene('library.html')">古老图书馆</button>
+    <button onclick="enterScene('jungle.html')">神秘丛林</button>
+    <button onclick="enterScene('temple.html')">古老神庙</button>
+  </div>
+
+  <script>
+    function enterScene(scene) {
+      localStorage.setItem('lastScene', scene);
+      window.location.href = scene;
+    }
+  </script>
+</body>
+</html>

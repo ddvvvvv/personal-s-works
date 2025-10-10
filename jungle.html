@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>神秘丛林</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'); background-size:cover;">
+
+  <h1>神秘丛林</h1>
+  <button onclick="startTreasureHunt()">开始探险</button>
+  <button onclick="backToMap()">返回地图</button>
+  <button onclick="toggleMusic()">切换音乐</button>
+
+  <div id="log"></div>
+  <audio id="bgm" src="music/jungle.mp3" loop autoplay></audio>
+
+  <script src="treasure.js"></script>
+  <script>
+    function toggleMusic() {
+      const audio = document.getElementById('bgm');
+      if (audio.paused) audio.play(); else audio.pause();
+    }
+
+    function backToMap() {
+      localStorage.setItem('lastScene', 'index.html');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
